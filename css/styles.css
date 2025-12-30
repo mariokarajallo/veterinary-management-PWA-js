@@ -1,52 +1,142 @@
-html {
-  min-height: 100%;
-}
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
-  min-height: 100%;
-  padding-bottom: 5rem;
-}
-.titulo {
-  font-weight: bold;
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: white;
-}
-.container {
-    background-color: white;
-}
-header {
-  margin-top: 3rem;
-}
-header h1 {
-  color: white;
-}
-.lista-citas .cita {
-  border-bottom: 1px solid #e1e1e1;
-  padding: 2rem;
-  padding-bottom: 3rem;
-  
-}
-.lista-citas .cita:last-of-type {
-  border-bottom: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f9;
 }
 
-.lista-citas .cita p {
-  margin:0;
-}
-.lista-citas .cita button {
-  margin-top: 1rem!important;
-}
-.lista-citas .cita span {
-  font-weight: bold;
-}
-textarea {
-    height: 200px!important;
+#wrapper {
+  overflow-x: hidden;
 }
 
-svg {
-  width: 21px;
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+  background-color: #2c3e50 !important;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #1a252f;
+  border-bottom: 1px solid #4e5d6c;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+/* Sidebar Links */
+.list-group-item {
+  border: none;
+  background-color: transparent !important;
+  color: #ecf0f1 !important;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+}
+
+.list-group-item:hover {
+  background-color: #34495e !important;
+  color: #3498db !important;
+  text-decoration: none;
+}
+
+.list-group-item.active-link {
+  background-color: #34495e !important;
+  color: #3498db !important;
+  border-left: 4px solid #3498db;
+}
+
+/* Cards */
+.card {
+  border-radius: 8px;
+  border: none;
+}
+
+.card-header {
+  background-color: #00a8cc !important;
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+.card-header h5 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.bg-primary {
+  background-color: #00a8cc !important;
+}
+
+.text-primary {
+  color: #00a8cc !important;
+}
+
+.btn-primary {
+  background-color: #00a8cc;
+  border-color: #00a8cc;
+}
+
+.btn-primary:hover {
+  background-color: #008ba8;
+  border-color: #008ba8;
+}
+
+/* Table */
+.table thead th {
+  border-top: none;
+  border-bottom: 2px solid #e9ecef;
+  color: #6c757d;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.table td {
+  vertical-align: middle;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+/* Icons in buttons */
+.btn-sm i {
+  font-size: 0.8rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
 }
